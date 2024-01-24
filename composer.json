@@ -1,13 +1,13 @@
 {
-    "name": "next-sentence/afterbuy-sdk",
+    "name": "wolkenkrieger/afterbuy-sdk",
     "description": "The AfterbuySDK provides to interact with the Afterbuy XML API",
     "keywords":     ["afterbuy"],
-    "homepage": "http://github.com/next-sentence/afterbuy-sdk",
+    "homepage": "http://github.com/wolkenkrieger/afterbuy-sdk",
     "license": "MIT",
     "authors": [
         {
-            "name": "Petru Binzari",
-            "email": "pekya1@gmail.com"
+            "name": "wolkenkrieger",
+            "email": "wolkenkrieger@gmail.com"
         }
     ],
     "require": {
