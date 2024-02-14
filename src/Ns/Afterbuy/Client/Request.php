@@ -51,6 +51,10 @@ use Ns\Afterbuy\Model\UpdateSoldItems\Order;
 use Ns\Afterbuy\Model\UpdateShopProducts\Product;
 use Ns\Afterbuy\Model\UpdateShopProducts\UpdateShopProductsRequest;
 use Ns\Afterbuy\Model\UpdateShopProducts\UpdateShopProductsResponse;
+
+use Ns\Afterbuy\Model\GetUserDefinedFlags\GetUserDefinedFlagsRequest;
+use Ns\Afterbuy\Model\GetUserDefinedFlags\GetUserDefinedFlagsResponse;
+
 /**
  * Class Request
  */
