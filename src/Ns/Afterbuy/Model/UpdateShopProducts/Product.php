@@ -556,6 +556,13 @@ class Product extends AbstractModel
      * @var AdditionalDescriptionField[]
      */
     protected $additionalDescriptionFields;
+	
+	/**
+	 * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Tags")
+	 * @Serializer\SerializedName("Tags")
+	 * @var Tags
+	 */
+	protected $tags;
 
     /**
      * @return ProductIdent
@@ -1788,6 +1795,22 @@ class Product extends AbstractModel
     {
         $this->additionalDescriptionFields = $additionalDescriptionFields;
     }
+	
+	/**
+	 * @return mixed
+	 */
+	public function getTags()
+	{
+		return $this->tags;
+	}
+	
+	/**
+	 * @param mixed $tags
+	 */
+	public function setTags($tags): void
+	{
+		$this->tags = $tags;
+	}
 
 }
 
