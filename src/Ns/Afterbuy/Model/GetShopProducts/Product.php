@@ -5,6 +5,7 @@ namespace Ns\Afterbuy\Model\GetShopProducts;
 use JMS\Serializer\Annotation as Serializer;
 use Ns\Afterbuy\Model\AbstractModel;
 use Ns\Afterbuy\Model\FloatType;
+use Ns\Afterbuy\Model\UpdateSoldItems\Tags;
 
 /**
  * Class Product
@@ -620,6 +621,13 @@ class Product extends AbstractModel
      * @var AdditionalDescriptionField[]
      */
     protected $additionalDescriptionFields;
+	
+	/**
+	 * @Serializer\Type("Ns\Afterbuy\Model\GetShopProducts\Tags")
+	 * @Serializer\SerializedName("Tags")
+	 * @var Tags
+	 */
+	protected $tags;
 
     /**
      * @return int
@@ -1308,4 +1316,12 @@ class Product extends AbstractModel
     {
         return $this->additionalDescriptionFields;
     }
+	
+	/**
+	 * @return mixed
+	 */
+	public function getTags()
+	{
+		return $this->tags;
+	}
 }
