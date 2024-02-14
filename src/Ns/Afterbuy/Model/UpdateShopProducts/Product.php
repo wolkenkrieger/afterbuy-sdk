@@ -581,11 +581,11 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getAnr()
     {
-        return $this->anr;
+        return $this->anr->getValue();
     }
 
     /**
@@ -837,11 +837,11 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getBasepriceFactor()
     {
-        return $this->basepriceFactor;
+        return $this->basepriceFactor->getValue();
     }
 
     /**
@@ -869,11 +869,11 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getSellingPrice()
     {
-        return $this->sellingPrice;
+        return $this->sellingPrice->getValue();
     }
 
     /**
@@ -885,11 +885,10 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
-    public function getBuyingPrice()
-    {
-        return $this->buyingPrice;
+    public function getBuyingPrice() {
+        return $this->buyingPrice->getValue();
     }
 
     /**
@@ -901,11 +900,11 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getDealerPrice()
     {
-        return $this->dealerPrice;
+        return $this->dealerPrice->getValue();
     }
 
     /**
@@ -981,11 +980,11 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getTaxRate()
     {
-        return $this->taxRate;
+        return $this->taxRate->getValue();
     }
 
     /**
@@ -997,11 +996,11 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getWeight()
     {
-        return $this->weight;
+        return $this->weight->getValue();
     }
 
     /**

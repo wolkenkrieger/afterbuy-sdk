@@ -38,19 +38,19 @@ abstract class AbstractScaledDiscount extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getScaledPrice()
     {
-        return $this->scaledPrice;
+        return $this->scaledPrice->getValue();
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getScaledDPrice()
     {
-        return $this->scaledDPrice;
+        return $this->scaledDPrice->getValue();
     }
 
 }

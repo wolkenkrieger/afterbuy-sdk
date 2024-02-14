@@ -78,11 +78,11 @@ abstract class AbstractProductIdent extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getAnr()
     {
-        return $this->anr;
+        return $this->anr->getValue();
     }
 
     /**

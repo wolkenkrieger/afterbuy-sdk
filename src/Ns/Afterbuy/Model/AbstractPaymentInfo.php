@@ -48,10 +48,10 @@ abstract class AbstractPaymentInfo extends AbstractModel
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getAlreadyPaid()
     {
-        return $this->alreadyPaid;
+        return $this->alreadyPaid->getValue();
     }
 }

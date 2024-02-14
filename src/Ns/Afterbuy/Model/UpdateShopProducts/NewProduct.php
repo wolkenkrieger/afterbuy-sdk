@@ -109,11 +109,11 @@ class NewProduct
     }
 
     /**
-     * @return FloatType
+     * @return float
      */
     public function getAnrRequested()
     {
-        return $this->anrRequested;
+        return $this->anrRequested->getValue();
     }
 
     /**
