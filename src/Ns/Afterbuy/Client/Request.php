@@ -319,6 +319,15 @@ class Request implements LoggerAwareInterface
     }
 
     /**
+     * @return GetUserDefinedFlagsResponse|null
+     */
+    public function getUserDefinedFlags()
+    {
+        $request = (new GetUserDefinedFlagsRequest($this->afterbuyGlobal));
+        return $this->serializeAndSubmitRequest($request, GetUserDefinedFlagsResponse::class);
+    }
+
+    /**
      * @param Order[] $orders
      * @param int     $detailLevel
      *
