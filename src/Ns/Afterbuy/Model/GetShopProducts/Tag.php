@@ -1,23 +1,24 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 
 namespace Ns\Afterbuy\Model\GetShopProducts;
 
 use JMS\Serializer\Annotation as Serializer;
 use Ns\Afterbuy\Model\AbstractModel;
 
-class Tags extends AbstractModel {
+class Tag extends AbstractModel {
 	
 	/**
-	 * @Serializer\Type("array<string>")
+	 * @Serializer\Type("<string>")
 	 * @Serializer\XmlList(inline=true, entry="Tag")
-	 * @var array
+	 * @var string
 	 */
 	protected $tag;
 	
 	/**
-	 * @return array
+	 * @return string
 	 */
-	public function getTags() {
+	public function getTag() {
 		return $this->tag;
 	}
 }
