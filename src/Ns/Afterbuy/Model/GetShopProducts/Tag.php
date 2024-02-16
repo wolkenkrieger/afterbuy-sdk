@@ -9,7 +9,7 @@ use Ns\Afterbuy\Model\AbstractModel;
 class Tag extends AbstractModel {
 	
 	/**
-	 * @Serializer\Type("<string>")
+	 * @Serializer\Type("string")
 	 * @Serializer\XmlList(inline=true, entry="Tag")
 	 * @var string
 	 */

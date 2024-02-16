@@ -113,9 +113,10 @@ class Order extends AbstractOrder
     protected $vorgangsInfo;
 	
 	/**
-	 * @Serializer\Type("Ns\Afterbuy\Model\UpdateSoldItems\Tags")
+	 * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateSoldItems\Tag>")
 	 * @Serializer\SerializedName("Tags")
-	 * @var Tags
+	 * @Serializer\XmlList(entry="Tag")
+	 * @var Tag[]
 	 */
 	protected $tags;
 

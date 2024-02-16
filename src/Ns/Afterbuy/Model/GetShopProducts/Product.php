@@ -623,13 +623,6 @@ class Product extends AbstractModel
     protected $additionalDescriptionFields;
 	
 	/**
-	 * @Serializer\Type("array<Ns\Afterbuy\Model\GetShopProducts\BaseProduct>")
-	 * @Serializer\XmlList(entry="BaseProduct")
-	 * @Serializer\SerializedName("BaseProducts")
-	 * @var BaseProduct[]
-	 */
-	
-	/**
 	 * @Serializer\Type("array<Ns\Afterbuy\Model\GetShopProducts\Tag>")
 	 * @Serializer\XmlList(entry="Tag")
 	 * @Serializer\SerializedName("Tags")
