@@ -11,15 +11,15 @@ class PartsProperties extends AbstractModel
 {
 
     /**
-     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\PartsProperties>")
+     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\PartsProperty>")
      * @Serializer\SerializedName("PartsProperties")
-     * @Serializer\XmlList(entry="PartsProperty")
-     * @var PartsProperties[]
+     * @Serializer\XmlList(entry="PartsProperty", inline=true)
+     * @var PartsProperty[]
      */
     protected $partsProperties;
 
     /**
-     * @return PartsProperties[]
+     * @return PartsProperty[]
      */
     public function getPartsProperties()
     {
@@ -35,7 +35,7 @@ class PartsProperties extends AbstractModel
     }
 
     /**
-     * @param PartsProperties $partsProperty
+     * @param PartsProperty $partsProperty
      * @return $this
      */
     public function addPartsProperty($partsProperty)

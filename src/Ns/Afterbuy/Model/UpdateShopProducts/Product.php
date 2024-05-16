@@ -537,7 +537,7 @@ class Product extends AbstractModel
      * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\PartsFitment")
      * @Serializer\SerializedName("PartsFitment")
      * @Serializer\XmlList(entry="PartsProperties")
-     * @var PartsFitment[]
+     * @var PartsFitment
      */
     protected $partsFitments;
 
@@ -1748,7 +1748,7 @@ class Product extends AbstractModel
     }
 
     /**
-     * @return PartsFitment[]
+     * @return PartsFitment
      */
     public function getPartsFitments()
     {

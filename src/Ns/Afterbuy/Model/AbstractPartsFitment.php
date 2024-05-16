@@ -2,8 +2,6 @@
 
 namespace Ns\Afterbuy\Model;
 use JMS\Serializer\Annotation as Serializer;
-use Ns\Afterbuy\Model\UpdateShopProducts\PartsProperty;
-use Ns\Afterbuy\Model\UpdateShopProducts\VariationValue;
 
 /**
  * Class AbstractPartsFitment
@@ -12,15 +10,15 @@ abstract class AbstractPartsFitment extends AbstractModel
 {
 
     /**
-     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\PartsProperty>")
-     * @Serializer\XmlList(entry="PartsProperty")
+     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\PartsProperties>")
      * @Serializer\SerializedName("PartsProperties")
-     * @var PartsProperty[]
+     * @Serializer\XmlList(entry="PartsProperties", inline=true)
+     * @var PartsProperties[]
      */
     protected $partsProperties;
 
     /**
-     * @return PartsProperty[]
+     * @return PartsProperties[]
      */
     public function getPartsProperties()
     {

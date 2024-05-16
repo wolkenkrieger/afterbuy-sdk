@@ -18,7 +18,7 @@ use Ns\Afterbuy\Model\AbstractPartsFitment;
 class PartsFitment extends AbstractPartsFitment
 {
     /**
-     * @param PartsProperty[] $partsProperties
+     * @param PartsProperties[] $partsProperties
      * @return $this
      */
     public function setPartsProperties(array $partsProperties)
@@ -28,12 +28,12 @@ class PartsFitment extends AbstractPartsFitment
     }
 
     /**
-     * @param $partsProperty
+     * @param $partsProperties
      * @return $this
      */
-    public function addPartsProperty($partsProperty)
+    public function addPartsProperties($partsProperties)
     {
-        $this->partsProperties[] = $partsProperty;
+        $this->partsProperties[] = $partsProperties;
         return $this;
     }
 }
