@@ -10,7 +10,6 @@ namespace Ns\Afterbuy\Model\UpdateShopProducts;
 
 use JMS\Serializer\Annotation as Serializer;
 use Ns\Afterbuy\Model\AbstractPartsFitment;
-use Ns\Afterbuy\Model\AbstractVariation;
 
 /**
  * Class PartsFitment

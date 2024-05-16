@@ -534,7 +534,7 @@ class Product extends AbstractModel
     protected $variations;
 
     /**
-     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\PartsFitment>")
+     * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\PartsFitment")
      * @Serializer\SerializedName("PartsFitment")
      * @Serializer\XmlList(entry="PartsProperties")
      * @var PartsFitment[]
@@ -556,7 +556,7 @@ class Product extends AbstractModel
      * @var AdditionalDescriptionField[]
      */
     protected $additionalDescriptionFields;
-	
+
 	/**
 	 * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Tags")
 	 * @Serializer\SerializedName("Tags")
@@ -1756,9 +1756,9 @@ class Product extends AbstractModel
     }
 
     /**
-     * @param PartsFitment[] $partsFitments
+     * @param PartsFitment $partsFitments
      */
-    public function setPartsFitments(array $partsFitments)
+    public function setPartsFitments($partsFitments)
     {
         $this->partsFitments = $partsFitments;
     }
@@ -1794,7 +1794,7 @@ class Product extends AbstractModel
     {
         $this->additionalDescriptionFields = $additionalDescriptionFields;
     }
-	
+
 	/**
 	 * @return mixed
 	 */
@@ -1802,7 +1802,7 @@ class Product extends AbstractModel
 	{
 		return $this->tags;
 	}
-	
+
 	/**
 	 * @param mixed $tags
 	 */

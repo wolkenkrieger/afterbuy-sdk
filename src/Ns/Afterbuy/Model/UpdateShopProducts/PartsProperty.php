@@ -23,7 +23,7 @@ class PartsProperty extends AbstractPartsProperty
      * @param string $propertyValue
      * @return $this
      */
-    public function setCatalogName($propertyValue)
+    public function setPropertyValue($propertyValue)
     {
         $this->propertyValue = $propertyValue;
         return $this;
