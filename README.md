@@ -14,10 +14,8 @@ Usage
       require_once __DIR__ . './../vendor/autoload.php';
       
       $config = array(
-          'userId'     => 'userid',
-          'userPass' => 'userpass',
-          'partnerId'    => '123456',
-          'partnerPass'    => '123',
+          'partnerToken' => 'partnerToken',
+          'accountToken' => 'accountToken',
           'errorLang'    => 'en',
       );
       
