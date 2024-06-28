@@ -79,20 +79,18 @@ class Request implements LoggerAwareInterface
     protected $afterbuyGlobal;
 
     protected $uri = 'https://api.afterbuy.de/afterbuy/ABInterface.aspx';
-
-    /**
-     * @param string $userId
-     * @param string $userPassword
-     * @param int    $partnerId
-     * @param string $partnerPassword
-     * @param string $errorLanguage
-     * @param string $doctypeWhitelist
-     */
-    public function __construct($userId, $userPassword, $partnerId, $partnerPassword, $errorLanguage, $doctypeWhitelist)
+	
+	/**
+	 * @param string $partnerToken
+	 * @param string $accountToken
+	 * @param string $errorLanguage
+	 * @param string $doctypeWhitelist
+	 */
+    public function __construct($partnerToken, $accountToken, $errorLanguage, $doctypeWhitelist)
     {
         AnnotationRegistry::registerLoader('class_exists');
 
-        $this->afterbuyGlobal = new AfterbuyGlobal($userId, $userPassword, $partnerId, $partnerPassword, $errorLanguage);
+        $this->afterbuyGlobal = new AfterbuyGlobal($partnerToken, $accountToken, $errorLanguage);
         $this->client = new \GuzzleHttp\Client(array('base_uri' => $this->uri));
 
         $builder = SerializerBuilder::create()

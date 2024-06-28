@@ -38,34 +38,20 @@ class AfterbuyGlobal extends AbstractModel
      * display articles data and custom attributes only
      */
     const DETAIL_LEVEL_CUSTOM_ATTRIBUTES = 32;
-
-    /**
-     * @Serializer\Type("integer")
-     * @Serializer\SerializedName("PartnerID")
-     * @var int
-     */
-    protected $partnerId;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("PartnerPassword")
-     * @var string
-     */
-    protected $partnerPassword;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("UserID")
-     * @var string
-     */
-    protected $userId;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("UserPassword")
-     * @var string
-     */
-    protected $userPassword;
+	
+	/**
+	 * @Serializer\Type("string")
+	 * @Serializer\SerializedName("PartnerToken")
+	 * @var string
+	 */
+	protected $partnerToken;
+	
+	/**
+	 * @Serializer\Type("string")
+	 * @Serializer\SerializedName("AccountToken")
+	 * @var string
+	 */
+	protected $accountToken;
 
     /**
      * @Serializer\Type("string")
@@ -89,116 +75,67 @@ class AfterbuyGlobal extends AbstractModel
     protected $errorLanguage;
 
     /**
-     * @param string $userId
-     * @param string $userPassword
-     * @param int    $partnerId
-     * @param string $partnerPassword
+     * @param string $partnerToken
+     * @param string $accountToken
      * @param int    $errorLanguage
      */
-    public function __construct($userId, $userPassword, $partnerId, $partnerPassword, $errorLanguage)
+    public function __construct($partnerToken, $accountToken, $errorLanguage)
     {
-        $this->userId = $userId;
-        $this->userPassword = $userPassword;
-        $this->partnerId = $partnerId;
-        $this->partnerPassword = $partnerPassword;
+		$this->partnerToken = $partnerToken;
+		$this->accountToken = $accountToken;
         $this->errorLanguage = $errorLanguage;
         $this->detailLevel = self::DETAIL_LEVEL_PROCESS_DATA;
     }
-
-    /**
-     * @return int
-     */
-    public function getPartnerId()
-    {
-        return $this->partnerId;
-    }
-
-    /**
-     * @param int $partnerId
-     *
-     * @return $this
-     */
-    public function setPartnerId($partnerId)
-    {
-        $this->partnerId = $partnerId;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPartnerPassword()
-    {
-        return $this->partnerPassword;
-    }
-
-    /**
-     * @param string $partnerPassword
-     *
-     * @return $this
-     */
-    public function setPartnerPassword($partnerPassword)
-    {
-        $this->partnerPassword = $partnerPassword;
-
-        return $this;
-    }
+	
+	/**
+	 * @return string
+	 */
+	public function getPartnerToken(): string
+	{
+		return $this->partnerToken;
+	}
+	
+	/**
+	 * @param string $partnerToken
+	 * @return        $this
+	 */
+	public function setPartnerToken($partnerToken): AfterbuyGlobal
+	{
+		$this->partnerToken = $partnerToken;
+		return $this;
+	}
+	
+	/**
+	 * @return string
+	 */
+	public function getAccountToken(): string
+	{
+		return $this->accountToken;
+	}
+	
+	/**
+	 * @param string $accountToken
+	 * @return       $this
+	 */
+	public function setAccountToken($accountToken): AfterbuyGlobal
+	{
+		$this->accountToken = $accountToken;
+		return $this;
+	}
 
     /**
      * @return string
      */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUserPassword()
-    {
-        return $this->userPassword;
-    }
-
-    /**
-     * @param string $userPassword
-     *
-     * @return $this
-     */
-    public function setUserPassword($userPassword)
-    {
-        $this->userPassword = $userPassword;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCallName()
+    public function getCallName(): string
     {
         return $this->callName;
     }
 
     /**
      * @param string $callName
-     *
      * @return $this
      */
-    public function setCallName($callName)
+    public function setCallName($callName): AfterbuyGlobal
     {
         $this->callName = $callName;
 
@@ -208,17 +145,16 @@ class AfterbuyGlobal extends AbstractModel
     /**
      * @return int
      */
-    public function getDetailLevel()
+    public function getDetailLevel(): int
     {
         return $this->detailLevel;
     }
 
     /**
      * @param int $detailLevel
-     *
      * @return $this
      */
-    public function setDetailLevel($detailLevel)
+    public function setDetailLevel($detailLevel): AfterbuyGlobal
     {
         $this->detailLevel = $detailLevel;
 
@@ -228,7 +164,7 @@ class AfterbuyGlobal extends AbstractModel
     /**
      * @return string
      */
-    public function getErrorLanguage()
+    public function getErrorLanguage(): string
     {
         return $this->errorLanguage;
     }
@@ -238,7 +174,7 @@ class AfterbuyGlobal extends AbstractModel
      *
      * @return $this
      */
-    public function setErrorLanguage($errorLanguage)
+    public function setErrorLanguage($errorLanguage): AfterbuyGlobal
     {
         $this->errorLanguage = $errorLanguage;
 

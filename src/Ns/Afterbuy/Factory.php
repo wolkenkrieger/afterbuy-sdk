@@ -11,16 +11,14 @@ use Monolog\Logger;
 class Factory
 {
     /**
-     * @param array $config
+     * @param  array $config
      * @return Request
      */
     public function createRequest(array $config)
     {
         $request =  new Request(
-            $config['userId'],
-            $config['userPass'],
-            $config['partnerId'],
-            $config['partnerPass'],
+			$config['partnerToken'],
+			$config['accountToken'],
             $config['errorLang'],
             $config['doctypeWhitelist']
         );
