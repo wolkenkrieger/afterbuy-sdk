@@ -563,6 +563,13 @@ class Product extends AbstractModel
 	 * @var Tags
 	 */
 	protected $tags;
+	
+	/**
+	 * @Serializer\Type("integer")
+	 * @Serializer\SerializedName("EconomicOperatorId")
+	 * @var int
+	 */
+	protected $economicOperatorId;
 
     /**
      * @return ProductIdent
@@ -1809,6 +1816,23 @@ class Product extends AbstractModel
 	public function setTags($tags): void
 	{
 		$this->tags = $tags;
+	}
+	
+	/**
+	 * @return int
+	 */
+	public function getEconomicOperatorId(): int
+	{
+		return $this->economicOperatorId;
+	}
+	
+	/**
+	 * @param int $economicOperatorId
+	 * @return void
+	 */
+	public function setEconomicOperatorId(int $economicOperatorId): void
+	{
+		$this->economicOperatorId = $economicOperatorId;
 	}
 
 }
