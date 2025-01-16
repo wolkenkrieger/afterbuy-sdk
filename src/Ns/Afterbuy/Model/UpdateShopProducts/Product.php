@@ -397,9 +397,9 @@ class Product extends AbstractModel
     protected $manufacturerStandardProductIDType;
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("ManufacturerStandardProductIDValue")
-     * @var int
+     * @var string
      */
     protected $manufacturerStandardProductIDValue;
 
