@@ -64,16 +64,16 @@ class ListingDetail extends BaseResult
     /**
      * @Serializer\Type("DateTime<'d.m.Y H:i:s', 'UTC', '!d.m.Y'>")
      * @Serializer\SerializedName("StartTime")
-     * @var integer
+     * @var \DateTime
      */
-    protected int $startTime;
+    protected \DateTime $startTime;
 
     /**
      * @Serializer\Type("DateTime<'d.m.Y H:i:s', 'UTC', '!d.m.Y'>")
      * @Serializer\SerializedName("EndTime")
-     * @var integer
+     * @var \DateTime
      */
-    protected int $endTime;
+    protected \DateTime $endTime;
 
     /**
      * @Serializer\Type("integer")
