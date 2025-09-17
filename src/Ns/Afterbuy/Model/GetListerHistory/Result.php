@@ -11,7 +11,8 @@ use Ns\Afterbuy\Model\Result as BaseResult;
 class Result extends BaseResult
 {
 	/**
-	 * @Serializer\Type("boolean")
+	 * @Serializer\Type("integer")
+	 * @Serializer\Accessor(setter="setHasMoreProductsFromInteger")
 	 * @Serializer\SerializedName("HasMoreProducts")
 	 * @var bool
 	 */
@@ -45,5 +46,21 @@ class Result extends BaseResult
 	public function hasMoreProducts(): bool
 	{
 		return $this->hasMoreProducts;
+	}
+	
+	/**
+	 * @param int $value
+	 */
+	public function setHasMoreProductsFromInteger(int $value): void
+	{
+		$this->hasMoreProducts = $this->setBooleanFromInteger($value);
+	}
+	
+	/**
+	 * @return \Ns\Afterbuy\Model\GetListerHistory\ListedItem[]
+	 */
+	public function getListedItems(): array
+	{
+		return $this->listedItems;
 	}
 }

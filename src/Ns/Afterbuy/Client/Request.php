@@ -366,7 +366,7 @@ class Request implements LoggerAwareInterface
      * @param string $message
      * @param array  $context
      */
-    protected function log($level, $message, array $context = array())
+    protected function log($level, $message, array $context = array()): void
     {
         if ($this->logger) {
             $this->logger->log($level, $message, $context);
@@ -379,7 +379,7 @@ class Request implements LoggerAwareInterface
      *
      * @return AbstractResponse|null
      */
-    protected function serializeAndSubmitRequest(AbstractRequest $request, $type)
+    protected function serializeAndSubmitRequest(AbstractRequest $request, $type): ?AbstractResponse
     {
         $xml = $this->serializer->serialize($request, 'xml');
         $options = array('body' => $xml, '_conditional' => array('Content-Type' => 'text/xml'));
@@ -403,7 +403,8 @@ class Request implements LoggerAwareInterface
             $object = $this->serializer->deserialize((string) $response->getBody(), $type, 'xml');
         } catch (\Exception $exception) {
             $this->log(LogLevel::ERROR, $exception->getMessage());
-//			pr( (string)$response->getBody() );
+			//pr($exception);die;
+			//pr( (string)$response->getBody() );
             return null;
         }
 

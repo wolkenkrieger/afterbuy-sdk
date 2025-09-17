@@ -146,9 +146,18 @@ class ListingDetail extends BaseResult
 	protected string $eBayGaleryURL;
 	
 	/**
-	 * @Serializer\Type("boolean")
+	 * @Serializer\Type("integer")
 	 * @Serializer\SerializedName("eBayRelist")
+	 * @Serializer\Accessor(setter="setEbayRelistFromInteger")
 	 * @var bool
 	 */
 	protected bool $eBayRelist;
+	
+	/**
+	 * @param int $value
+	 */
+	public function setEbayRelistFromInteger(int $value): void
+	{
+		$this->eBayRelist = $this->setBooleanFromInteger($value);
+	}
 }

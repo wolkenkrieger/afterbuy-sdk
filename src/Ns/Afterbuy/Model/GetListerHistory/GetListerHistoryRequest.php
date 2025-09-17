@@ -14,7 +14,7 @@ use Ns\Afterbuy\Model\AbstractFilter;
  */
 class GetListerHistoryRequest extends AbstractRequest
 {
-    const CALL_NAME = 'GetListerHistory';
+    public const CALL_NAME = 'GetListerHistory';
 
     /**
      * @Serializer\Type("array<Ns\Afterbuy\Model\AbstractFilter>")
@@ -22,7 +22,7 @@ class GetListerHistoryRequest extends AbstractRequest
      * @Serializer\SerializedName("DataFilter")
      * @var AbstractFilter[]
      */
-    protected $filters;
+    protected array $filters;
 
     /**
      * @param AfterbuyGlobal $afterbuyGlobal
