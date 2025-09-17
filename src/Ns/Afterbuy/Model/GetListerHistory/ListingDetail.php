@@ -13,150 +13,142 @@ class ListingDetail extends BaseResult
 {
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
      * @Serializer\SerializedName("Anr")
-     * @var integer
+     * @var \Ns\Afterbuy\Model\FloatType
      */
-    protected $anr;
+    protected \Ns\Afterbuy\Model\FloatType $anr;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("SoldItems")
      * @var integer
      */
-    protected $soldItems;
+    protected int $soldItems;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("ListedQuantity")
      * @var integer
      */
-    protected $listedQuantity;
+    protected int $listedQuantity;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("ListingPlattform")
-     * @var integer
+     * @var string
      */
-    protected $listingPlattform;
+    protected string $listingPlattform;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("ListingTitle")
-     * @var integer
+     * @var string
      */
-    protected $listingTitle;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("ListingSubTitle")
-     * @var integer
-     */
-    protected $listingSubTitle;
-
-    /**
-     * @Serializer\Type("integer")
-     * @Serializer\SerializedName("eBayCurrencyId")
-     * @var integer
-     */
-    protected $eBayCurrencyId;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("eBayCurrency")
-     * @var integer
-     */
-    protected $eBayCurrency;
-
-    /**
-     * @Serializer\Type("integer")
-     * @Serializer\SerializedName("eBayCategoryID")
-     * @var integer
-     */
-    protected $eBayCategoryID;
-
-    /**
-     * @Serializer\Type("integer")
-     * @Serializer\SerializedName("eBayCategory2ID")
-     * @var integer
-     */
-    protected $eBayCategory2ID;
-
-    /**
-     * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
-     * @Serializer\SerializedName("eBayStartprice")
-     * @var integer
-     */
-    protected $eBayStartprice;
-
-    /**
-     * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
-     * @Serializer\SerializedName("eBayBuyItNowPrice")
-     * @var integer
-     */
-    protected $eBayBuyItNowPrice;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("eBayPictureURL")
-     * @var integer
-     */
-    protected $eBayPictureURL;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("eBayGaleryURL")
-     * @var integer
-     */
-    protected $eBayGaleryURL;
-
-    /**
-     * @Serializer\Type("integer")
-     * @Serializer\SerializedName("eBayRelist")
-     * @var integer
-     */
-    protected $eBayRelist;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("SellStatus")
-     * @var integer
-     */
-    protected $sellStatus;
-
-    /**
-     * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
-     * @Serializer\SerializedName("ListingFee")
-     * @var integer
-     */
-    protected $listingFee;
+    protected string $listingTitle;
+	
+	/**
+	 * @Serializer\Type("string")
+	 * @Serializer\SerializedName("SellStatus")
+	 * @var string
+	 */
+	protected string $sellStatus;
+	
+	/**
+	 * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
+	 * @Serializer\SerializedName("ListingFee")
+	 * @var \Ns\Afterbuy\Model\FloatType
+	 */
+	protected \Ns\Afterbuy\Model\FloatType $listingFee;
 
     /**
      * @Serializer\Type("DateTime<'d.m.Y H:i:s', 'UTC', '!d.m.Y'>")
      * @Serializer\SerializedName("StartTime")
      * @var integer
      */
-    protected $startTime;
+    protected int $startTime;
 
     /**
      * @Serializer\Type("DateTime<'d.m.Y H:i:s', 'UTC', '!d.m.Y'>")
      * @Serializer\SerializedName("EndTime")
      * @var integer
      */
-    protected $endTime;
+    protected int $endTime;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("ListingDuration")
      * @var integer
      */
-    protected $listingDuration;
+    protected int $listingDuration;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("ListingType")
      * @var integer
      */
-    protected $listingType;
-
+    protected int $listingType;
+	
+	/**
+	 * @Serializer\Type("string")
+	 * @Serializer\SerializedName("ListingDescription")
+	 * @var string
+	 */
+	protected string $listingDescription;
+	
+	/**
+	 * @Serializer\Type("integer")
+	 * @Serializer\SerializedName("eBayCategoryID")
+	 * @var int
+	 */
+	protected int $eBayCategoryID;
+	
+	/**
+	 * @Serializer\Type("integer")
+	 * @Serializer\SerializedName("eBayCategory2ID")
+	 * @var int
+	 */
+	protected int $eBayCategory2ID;
+	
+	/**
+	 * @Serializer\Type("integer")
+	 * @Serializer\SerializedName("eBaySubAccountID")
+	 * @var int
+	 */
+	protected int $eBaySubAccountID;
+	
+	/**
+	 * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
+	 * @Serializer\SerializedName("eBayStartPrice")
+	 * @var \Ns\Afterbuy\Model\FloatType
+	 */
+	protected \Ns\Afterbuy\Model\FloatType $eBayStartPrice;
+	
+	/**
+	 * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
+	 * @Serializer\SerializedName("eBayBuyNowPrice")
+	 * @var \Ns\Afterbuy\Model\FloatType
+	 */
+	protected \Ns\Afterbuy\Model\FloatType $eBayBuyNowPrice;
+	
+	/**
+	 * @Serializer\Type("string")
+	 * @Serializer\SerializedName("eBayPictureURL")
+	 * @var string
+	 */
+	protected string $eBayPictureURL;
+	
+	/**
+	 * @Serializer\Type("string")
+	 * @Serializer\SerializedName("eBayGaleryURL")
+	 * @var string
+	 */
+	protected string $eBayGaleryURL;
+	
+	/**
+	 * @Serializer\Type("boolean")
+	 * @Serializer\SerializedName("eBayRelist")
+	 * @var bool
+	 */
+	protected bool $eBayRelist;
 }
