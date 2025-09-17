@@ -23,8 +23,16 @@ class GetListerHistoryRequest extends AbstractRequest
      * @var AbstractFilter[]
      */
     protected array $filters;
-
-    /**
+	
+	/**
+	 * @Serializer\Type("integer")
+	 * @Serializer\Accessor(getter="getMaxHistoryItems", setter="setMaxHistoryItems")
+	 * @Serializer\SerializedName("MaxHistoryItems")
+	 * @var int
+	 */
+	protected int $maxHistoryItems;
+	
+	/**
      * @param AfterbuyGlobal $afterbuyGlobal
      */
     public function __construct(AfterbuyGlobal $afterbuyGlobal)
@@ -35,31 +43,29 @@ class GetListerHistoryRequest extends AbstractRequest
     }
 
     /**
-     * @return AbstractFilter
+     * @return \Ns\Afterbuy\Model\AbstractFilter[]
      */
-    public function getFilters()
+    public function getFilters(): array
     {
         return $this->filters;
     }
-
-    /**
-     * @param AbstractFilter[] $filters
-     *
-     * @return $this
-     */
-    public function setFilters(array $filters)
+	
+	/**
+	 * @param array $filters
+	 * @return $this
+	 */
+    public function setFilters(array $filters): GetListerHistoryRequest
     {
         $this->filters = $filters;
 
         return $this;
     }
-
-    /**
-     * @param AbstractFilter $filter
-     *
-     * @return $this
-     */
-    public function addFilter(AbstractFilter $filter)
+	
+	/**
+	 * @param \Ns\Afterbuy\Model\AbstractFilter $filter
+	 * @return $this
+	 */
+    public function addFilter(AbstractFilter $filter): GetListerHistoryRequest
     {
         $this->filters[] = $filter;
 
@@ -69,7 +75,7 @@ class GetListerHistoryRequest extends AbstractRequest
     /**
      * @return int
      */
-    public function getMaxHistoryItems()
+    public function getMaxHistoryItems(): int
     {
         return $this->maxHistoryItems;
     }
@@ -78,7 +84,7 @@ class GetListerHistoryRequest extends AbstractRequest
      * @param $maxHistoryItems
      * @return $this
      */
-    public function setMaxHistoryItems($maxHistoryItems)
+    public function setMaxHistoryItems($maxHistoryItems): GetListerHistoryRequest
     {
         $this->maxHistoryItems = $maxHistoryItems;
 

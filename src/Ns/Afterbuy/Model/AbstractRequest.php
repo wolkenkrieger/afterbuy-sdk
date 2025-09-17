@@ -14,7 +14,7 @@ class AbstractRequest extends AbstractModel
      * @Serializer\SerializedName("AfterbuyGlobal")
      * @var AfterbuyGlobal
      */
-    protected $afterbuyGlobal;
+    protected AfterbuyGlobal $afterbuyGlobal;
 
     /**
      * @param AfterbuyGlobal $afterbuyGlobal
@@ -26,10 +26,9 @@ class AbstractRequest extends AbstractModel
 
     /**
      * @param int $detailLevel
-     *
      * @return $this
      */
-    public function setDetailLevel($detailLevel)
+    public function setDetailLevel(int $detailLevel): AbstractRequest
     {
         $this->afterbuyGlobal->setDetailLevel($detailLevel);
 
@@ -38,10 +37,9 @@ class AbstractRequest extends AbstractModel
 
     /**
      * @param string $callName
-     *
      * @return $this
      */
-    public function setCallName($callName)
+    public function setCallName(string $callName): AbstractRequest
     {
         $this->afterbuyGlobal->setCallName($callName);
 

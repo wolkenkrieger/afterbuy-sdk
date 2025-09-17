@@ -206,23 +206,21 @@ class Request implements LoggerAwareInterface
 
         return $this->serializeAndSubmitRequest($request, GetShopProductsResponse::class);
     }
-
-    /**
-     * @param array $filters
-     * @param int $page
-     * @param int $maxHistoryProducts
-     * @param bool|true $enablePagination
-     * @param int $detailLevel
-     * @return GetShopProductsResponse|null
-     */
-    public function getListerHistory(array $filters = array(), $page = 1, $maxHistoryProducts = 250,
-		$enablePagination = true, $detailLevel = AfterbuyGlobal::DETAIL_LEVEL_PROCESS_DATA
-	)
+	
+	/**
+	 * @param array $filters
+	 * @param int   $maxHistoryItems
+	 * @param int   $detailLevel
+	 * @return \Ns\Afterbuy\Model\AbstractResponse|null
+	 */
+    public function getListerHistory(array $filters = array(), int $maxHistoryItems = 250,
+                                     int $detailLevel = AfterbuyGlobal::DETAIL_LEVEL_PROCESS_DATA
+	): ?AbstractResponse
     {
         $request = (new GetListerHistoryRequest($this->afterbuyGlobal))
             ->setFilters($filters)
             ->setDetailLevel($detailLevel)
-            ->setMaxHistoryItems($maxHistoryProducts)
+            ->setMaxHistoryItems($maxHistoryItems)
             ;
         return $this->serializeAndSubmitRequest($request, GetListerHistoryResponse::class);
     }
