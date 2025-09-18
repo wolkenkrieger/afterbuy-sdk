@@ -46,4 +46,44 @@ class ListedItem extends AbstractModel
 	 * @var \Ns\Afterbuy\Model\GetListerHistory\ProductDetail
 	 */
 	protected ProductDetail $productDetail;
+	
+	/**
+	 * @return int
+	 */
+	public function getHistoryID(): int
+	{
+		return $this->historyId;
+	}
+	
+	/**
+	 * @return int
+	 */
+	public function getListingID(): int
+	{
+		return $this->listingId;
+	}
+	
+	/**
+	 * @return int
+	 */
+	public function getProductID(): int
+	{
+		return $this->productId;
+	}
+	
+	/**
+	 * @return \Ns\Afterbuy\Model\GetListerHistory\ListingDetail
+	 */
+	public function getListingDetail(): ListingDetail
+	{
+		return $this->listingDetail;
+	}
+	
+	/**
+	 * @return \Ns\Afterbuy\Model\GetListerHistory\ProductDetail
+	 */
+	public function getProductDetail(): ProductDetail
+	{
+		return $this->productDetail;
+	}
 }

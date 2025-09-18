@@ -13,21 +13,21 @@ class ProductFilter extends AbstractFilter
     /**
      * Anr Filter - at this point ID from target platform!
      */
-    const FILTER_PRODUCT_ANR = 'Anr';
+    public const FILTER_PRODUCT_ANR = 'Anr';
 
     /**
      * HistoryID Filter - can't use afterbuyID!
      */
-    const FILTER_HISTORY_ID = 'HistoryID';
-
-    /**
-     * @param string $value
-     * @param string $name
-     */
-    public function __construct($value, $name = self::FILTER_HISTORY_ID)
+    public const FILTER_HISTORY_ID = 'HistoryID';
+	
+	/**
+	 * @param        $filterValue
+	 * @param string $name
+	 */
+    public function __construct($filterValue, string $name = self::FILTER_HISTORY_ID)
     {
         parent::__construct($name);
 
-        $this->filterValues['FilterValue'] = strval($value);
+        $this->filterValues['FilterValue'] = $filterValue;
     }
 }

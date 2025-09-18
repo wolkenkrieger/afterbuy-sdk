@@ -41,6 +41,22 @@ class Result extends BaseResult
     protected array $listedItems;
 	
 	/**
+	 * @return int
+	 */
+	public function getLastHistoryID(): int
+	{
+		return $this->lastHistoryID;
+	}
+	
+	/**
+	 * @return int
+	 */
+	public function getResultCount(): int
+	{
+		return $this->resultCount;
+	}
+	
+	/**
 	 * @return bool
 	 */
 	public function hasMoreProducts(): bool
