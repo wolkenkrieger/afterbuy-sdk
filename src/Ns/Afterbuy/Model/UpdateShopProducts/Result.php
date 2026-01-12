@@ -1,0 +1,30 @@
+<?php
+
+namespace Ns\Afterbuy\Model\UpdateShopProducts;
+
+use JMS\Serializer\Annotation as Serializer;
+use Ns\Afterbuy\Model\GetShopProducts\PaginationResult;
+use Ns\Afterbuy\Model\GetShopProducts\Product;
+use Ns\Afterbuy\Model\Result as BaseResult;
+
+/**
+ * Class Result
+ */
+class Result extends BaseResult
+{
+    /**
+     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\NewProduct")
+     * @Serializer\SerializedName("NewProducts")
+     * @Serializer\XmlList(entry="NewProduct")
+     * @var \Ns\Afterbuy\Model\UpdateShopProducts\NewProduct[]
+     */
+    protected array $newProducts;
+
+    /**
+     * @return NewProduct[]
+     */
+    public function getNewProducts()
+    {
+        return $this->newProducts;
+    }
+}

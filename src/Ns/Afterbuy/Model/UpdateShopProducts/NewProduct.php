@@ -16,64 +16,56 @@ class NewProduct
      * @Serializer\SerializedName("ProductID")
      * @var int
      */
-    protected $productId;
+    protected int $productId;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("ProductIDRequested")
      * @var int
      */
-    protected $productIdRequested;
+    protected int $productIdRequested;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("UserProductID")
      * @var string
      */
-    protected $userProductId;
+    protected string $userProductId;
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
      * @Serializer\SerializedName("AnrRequested")
      * @var FloatType
      */
-    protected $anrRequested;
+    protected FloatType $anrRequested;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("EANRequested")
      * @var int
      */
-    protected $eanRequested;
+    protected int $eanRequested;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("Anr")
      * @var int
      */
-    protected $anr;
+    protected int $anr;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("EAN")
      * @var int
      */
-    protected $eam;
+    protected int $eam;
 
     /**
      * @return int
      */
-    public function getProductId()
+    public function getProductId(): int
     {
         return $this->productId;
-    }
-
-    /**
-     * @param int $productId
-     */
-    public function setProductId($productId)
-    {
-        $this->productId = $productId;
     }
 
     /**
@@ -85,27 +77,11 @@ class NewProduct
     }
 
     /**
-     * @param int $productIdRequested
-     */
-    public function setProductIdRequested($productIdRequested)
-    {
-        $this->productIdRequested = $productIdRequested;
-    }
-
-    /**
      * @return string
      */
     public function getUserProductId()
     {
         return $this->userProductId;
-    }
-
-    /**
-     * @param string $userProductId
-     */
-    public function setUserProductId($userProductId)
-    {
-        $this->userProductId = $userProductId;
     }
 
     /**
@@ -117,27 +93,11 @@ class NewProduct
     }
 
     /**
-     * @param FloatType $anrRequested
-     */
-    public function setAnrRequested($anrRequested)
-    {
-        $this->anrRequested = $anrRequested;
-    }
-
-    /**
      * @return int
      */
     public function getEanRequested()
     {
         return $this->eanRequested;
-    }
-
-    /**
-     * @param int $eanRequested
-     */
-    public function setEanRequested($eanRequested)
-    {
-        $this->eanRequested = $eanRequested;
     }
 
     /**
@@ -149,28 +109,11 @@ class NewProduct
     }
 
     /**
-     * @param int $anr
-     */
-    public function setAnr($anr)
-    {
-        $this->anr = $anr;
-    }
-
-    /**
      * @return int
      */
     public function getEam()
     {
-        return $this->eam;
+	    return $this->eam;
     }
-
-    /**
-     * @param int $eam
-     */
-    public function setEam($eam)
-    {
-        $this->eam = $eam;
-    }
-
 }
 
