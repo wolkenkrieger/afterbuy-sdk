@@ -11,9 +11,9 @@ use Ns\Afterbuy\Model\Result as BaseResult;
 class Result extends BaseResult
 {
     /**
-     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\NewProducts>")
+     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\NewProduct>")
      * @Serializer\SerializedName("NewProducts")
-     * @Serializer\XmlList(inline = true, entry="NewProduct")
+     * @Serializer\XmlList(entry="NewProduct")
      * @var NewProduct[]
      */
     protected array $newProducts;
