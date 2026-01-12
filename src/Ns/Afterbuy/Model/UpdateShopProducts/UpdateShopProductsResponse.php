@@ -13,7 +13,7 @@ use Ns\Afterbuy\Model\AbstractResponse;
 class UpdateShopProductsResponse extends AbstractResponse
 {
     /**
-     * @Serializer\Type("Ns\Afterbuy\Model\Result")
+     * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Result")
      * @Serializer\SerializedName("Result")
      * @var Result
      */
