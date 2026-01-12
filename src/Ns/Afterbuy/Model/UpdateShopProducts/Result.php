@@ -3,8 +3,6 @@
 namespace Ns\Afterbuy\Model\UpdateShopProducts;
 
 use JMS\Serializer\Annotation as Serializer;
-use Ns\Afterbuy\Model\GetShopProducts\PaginationResult;
-use Ns\Afterbuy\Model\GetShopProducts\Product;
 use Ns\Afterbuy\Model\Result as BaseResult;
 
 /**

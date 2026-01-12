@@ -15,9 +15,9 @@ class UpdateShopProductsResponse extends AbstractResponse
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Result")
      * @Serializer\SerializedName("Result")
-     * @var Result
+     * @var \Ns\Afterbuy\Model\UpdateShopProducts\Result
      */
-    protected $result;
+    protected Result $result;
 
     /**
      * @return Result
