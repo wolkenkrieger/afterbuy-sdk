@@ -2,13 +2,14 @@
 
 namespace Ns\Afterbuy\Model\UpdateShopProducts;
 
+use Ns\Afterbuy\Model\AbstractModel;
 use Ns\Afterbuy\Model\FloatType;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
  * Class NewProduct
  */
-class NewProduct
+class NewProduct extends AbstractModel
 {
 
     /**
@@ -71,7 +72,7 @@ class NewProduct
     /**
      * @return int
      */
-    public function getProductIdRequested()
+    public function getProductIdRequested(): int
     {
         return $this->productIdRequested;
     }
@@ -79,7 +80,7 @@ class NewProduct
     /**
      * @return string
      */
-    public function getUserProductId()
+    public function getUserProductId(): string
     {
         return $this->userProductId;
     }
@@ -87,7 +88,7 @@ class NewProduct
     /**
      * @return float
      */
-    public function getAnrRequested()
+    public function getAnrRequested(): float
     {
         return $this->anrRequested->getValue();
     }
@@ -95,7 +96,7 @@ class NewProduct
     /**
      * @return int
      */
-    public function getEanRequested()
+    public function getEanRequested(): int
     {
         return $this->eanRequested;
     }
@@ -103,7 +104,7 @@ class NewProduct
     /**
      * @return int
      */
-    public function getAnr()
+    public function getAnr(): int
     {
         return $this->anr;
     }
@@ -111,7 +112,7 @@ class NewProduct
     /**
      * @return int
      */
-    public function getEan()
+    public function getEan(): int
     {
 	    return $this->ean;
     }
