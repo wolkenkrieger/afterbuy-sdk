@@ -11,10 +11,18 @@ use Ns\Afterbuy\Model\Result as BaseResult;
 class Result extends BaseResult
 {
     /**
-     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\NewProduct")
+     * @Serializer\Type("array<Ns\Afterbuy\Model\UpdateShopProducts\NewProducts>")
      * @Serializer\SerializedName("NewProducts")
      * @Serializer\XmlList(entry="NewProduct")
-     * @var \Ns\Afterbuy\Model\UpdateShopProducts\NewProduct[]
+     * @var NewProduct[]
      */
     protected array $newProducts;
+	
+	/**
+	 * @return \Ns\Afterbuy\Model\UpdateShopProducts\NewProduct[]
+	 */
+	public function getNewProducts()
+	{
+		return $this->newProducts;
+	}
 }
