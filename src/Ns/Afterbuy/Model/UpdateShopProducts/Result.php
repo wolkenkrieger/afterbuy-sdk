@@ -17,12 +17,4 @@ class Result extends BaseResult
      * @var \Ns\Afterbuy\Model\UpdateShopProducts\NewProduct[]
      */
     protected array $newProducts;
-
-    /**
-     * @return NewProduct[]
-     */
-    public function getNewProducts()
-    {
-        return $this->newProducts;
-    }
 }

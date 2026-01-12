@@ -13,16 +13,16 @@ use Ns\Afterbuy\Model\AbstractResponse;
 class UpdateShopProductsResponse extends AbstractResponse
 {
     /**
-     * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Result")
+     * @Serializer\Type("Ns\Afterbuy\Model\Result")
      * @Serializer\SerializedName("Result")
-     * @var \Ns\Afterbuy\Model\UpdateShopProducts\Result
+     * @var Result
      */
-    protected Result $result;
+    protected $result;
 
     /**
      * @return Result
      */
-    public function getResult(): Result
+    public function getResult()
     {
         return $this->result;
     }
