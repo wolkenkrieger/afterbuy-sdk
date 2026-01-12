@@ -25,26 +25,5 @@ class NewProducts
     {
         return $this->newProducts;
     }
-
-    /**
-     * @param NewProduct[] $newProducts
-     * @return $this
-     */
-    public function setNewProducts($newProducts)
-    {
-        $this->newProducts = $newProducts;
-        return $this;
-    }
-
-    /**
-     * @param NewProduct $newProduct
-     * @return $this
-     */
-    public function addNewProduct($newProduct)
-    {
-        $this->newProducts[] = $newProduct;
-        return $this;
-    }
-
 }
 

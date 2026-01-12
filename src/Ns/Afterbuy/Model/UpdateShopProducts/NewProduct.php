@@ -58,7 +58,7 @@ class NewProduct
      * @Serializer\SerializedName("EAN")
      * @var int
      */
-    protected int $eam;
+    protected int $ean;
 
     /**
      * @return int
@@ -111,9 +111,9 @@ class NewProduct
     /**
      * @return int
      */
-    public function getEam()
+    public function getEan()
     {
-	    return $this->eam;
+	    return $this->ean;
     }
 }
 
