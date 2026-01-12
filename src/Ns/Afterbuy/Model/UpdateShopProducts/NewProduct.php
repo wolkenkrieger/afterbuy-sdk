@@ -41,25 +41,25 @@ class NewProduct extends AbstractModel
     protected FloatType $anrRequested;
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("EANRequested")
-     * @var int
+     * @var string
      */
-    protected int $eanRequested;
+    protected string $eanRequested;
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
      * @Serializer\SerializedName("Anr")
-     * @var int
+     * @var FloatType
      */
-    protected int $anr;
+    protected FloatType $anr;
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("EAN")
-     * @var int
+     * @var string
      */
-    protected int $ean;
+    protected string $ean;
 
     /**
      * @return int
@@ -94,25 +94,25 @@ class NewProduct extends AbstractModel
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getEanRequested(): int
+    public function getEanRequested(): string
     {
         return $this->eanRequested;
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getAnr(): int
+    public function getAnr(): float
     {
-        return $this->anr;
+        return $this->anr->getValue();
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getEan(): int
+    public function getEan(): string
     {
 	    return $this->ean;
     }
