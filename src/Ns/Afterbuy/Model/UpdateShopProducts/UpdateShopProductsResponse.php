@@ -14,7 +14,7 @@ use Ns\Afterbuy\Model\Result;
 class UpdateShopProductsResponse extends AbstractResponse
 {
     /**
-     * @Serializer\Type("Ns\Afterbuy\Model\Result")
+     * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Result")
      * @Serializer\SerializedName("Result")
      * @var Result
      */
