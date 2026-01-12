@@ -15,14 +15,14 @@ class UpdateShopProductsResponse extends AbstractResponse
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Result")
      * @Serializer\SerializedName("Result")
-     * @var Result
+     * @var null|Result
      */
-    protected \Ns\Afterbuy\Model\UpdateShopProducts\Result $result;
+    protected ?Result $result = null;
 
     /**
-     * @return Result
+     * @return null|Result
      */
-    public function getResult(): \Ns\Afterbuy\Model\UpdateShopProducts\Result
+    public function getResult(): ?Result
     {
         return $this->result;
     }
