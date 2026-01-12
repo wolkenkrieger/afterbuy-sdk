@@ -4,7 +4,6 @@ namespace Ns\Afterbuy\Model\UpdateShopProducts;
 
 use JMS\Serializer\Annotation as Serializer;
 use Ns\Afterbuy\Model\AbstractResponse;
-use Ns\Afterbuy\Model\Result;
 
 /**
  * Class UpdateShopProductsResponse
@@ -18,7 +17,7 @@ class UpdateShopProductsResponse extends AbstractResponse
      * @Serializer\SerializedName("Result")
      * @var Result
      */
-    protected Result $result;
+    protected $result;
 
     /**
      * @return Result
