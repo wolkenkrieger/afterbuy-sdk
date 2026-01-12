@@ -17,7 +17,7 @@ class UpdateShopProductsResponse extends AbstractResponse
      * @Serializer\SerializedName("Result")
      * @var null|Result
      */
-    protected ?Result $result = null;
+    protected ?Result $result;
 
     /**
      * @return null|Result
