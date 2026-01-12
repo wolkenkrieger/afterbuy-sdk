@@ -17,12 +17,12 @@ class UpdateShopProductsResponse extends AbstractResponse
      * @Serializer\SerializedName("Result")
      * @var Result
      */
-    protected $result;
+    protected \Ns\Afterbuy\Model\UpdateShopProducts\Result $result;
 
     /**
      * @return Result
      */
-    public function getResult()
+    public function getResult(): \Ns\Afterbuy\Model\UpdateShopProducts\Result
     {
         return $this->result;
     }
