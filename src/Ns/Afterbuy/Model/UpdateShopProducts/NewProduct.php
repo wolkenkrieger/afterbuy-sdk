@@ -2,13 +2,14 @@
 
 namespace Ns\Afterbuy\Model\UpdateShopProducts;
 
+use Ns\Afterbuy\Model\AbstractModel;
 use Ns\Afterbuy\Model\FloatType;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
  * Class NewProduct
  */
-class NewProduct
+class NewProduct extends AbstractModel
 {
 
     /**
@@ -16,161 +17,104 @@ class NewProduct
      * @Serializer\SerializedName("ProductID")
      * @var int
      */
-    protected $productId;
+    protected int $productId;
 
     /**
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("ProductIDRequested")
      * @var int
      */
-    protected $productIdRequested;
+    protected int $productIdRequested;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("UserProductID")
      * @var string
      */
-    protected $userProductId;
+    protected string $userProductId;
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
      * @Serializer\SerializedName("AnrRequested")
      * @var FloatType
      */
-    protected $anrRequested;
+    protected FloatType $anrRequested;
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("EANRequested")
-     * @var int
+     * @var string
      */
-    protected $eanRequested;
+    protected string $eanRequested;
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
      * @Serializer\SerializedName("Anr")
-     * @var int
+     * @var FloatType
      */
-    protected $anr;
+    protected FloatType $anr;
 
     /**
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("EAN")
-     * @var int
+     * @var string
      */
-    protected $eam;
+    protected string $ean;
 
     /**
      * @return int
      */
-    public function getProductId()
+    public function getProductId(): int
     {
         return $this->productId;
     }
 
     /**
-     * @param int $productId
-     */
-    public function setProductId($productId)
-    {
-        $this->productId = $productId;
-    }
-
-    /**
      * @return int
      */
-    public function getProductIdRequested()
+    public function getProductIdRequested(): int
     {
         return $this->productIdRequested;
     }
 
     /**
-     * @param int $productIdRequested
-     */
-    public function setProductIdRequested($productIdRequested)
-    {
-        $this->productIdRequested = $productIdRequested;
-    }
-
-    /**
      * @return string
      */
-    public function getUserProductId()
+    public function getUserProductId(): string
     {
         return $this->userProductId;
     }
 
     /**
-     * @param string $userProductId
-     */
-    public function setUserProductId($userProductId)
-    {
-        $this->userProductId = $userProductId;
-    }
-
-    /**
      * @return float
      */
-    public function getAnrRequested()
+    public function getAnrRequested(): float
     {
         return $this->anrRequested->getValue();
     }
 
     /**
-     * @param FloatType $anrRequested
+     * @return string
      */
-    public function setAnrRequested($anrRequested)
-    {
-        $this->anrRequested = $anrRequested;
-    }
-
-    /**
-     * @return int
-     */
-    public function getEanRequested()
+    public function getEanRequested(): string
     {
         return $this->eanRequested;
     }
 
     /**
-     * @param int $eanRequested
+     * @return float
      */
-    public function setEanRequested($eanRequested)
+    public function getAnr(): float
     {
-        $this->eanRequested = $eanRequested;
+        return $this->anr->getValue();
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getAnr()
+    public function getEan(): string
     {
-        return $this->anr;
+	    return $this->ean;
     }
-
-    /**
-     * @param int $anr
-     */
-    public function setAnr($anr)
-    {
-        $this->anr = $anr;
-    }
-
-    /**
-     * @return int
-     */
-    public function getEam()
-    {
-        return $this->eam;
-    }
-
-    /**
-     * @param int $eam
-     */
-    public function setEam($eam)
-    {
-        $this->eam = $eam;
-    }
-
 }
 

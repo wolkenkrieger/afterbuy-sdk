@@ -4,7 +4,6 @@ namespace Ns\Afterbuy\Model\UpdateShopProducts;
 
 use JMS\Serializer\Annotation as Serializer;
 use Ns\Afterbuy\Model\AbstractResponse;
-use Ns\Afterbuy\Model\Result;
 
 /**
  * Class UpdateShopProductsResponse
@@ -14,16 +13,16 @@ use Ns\Afterbuy\Model\Result;
 class UpdateShopProductsResponse extends AbstractResponse
 {
     /**
-     * @Serializer\Type("Ns\Afterbuy\Model\Result")
+     * @Serializer\Type("Ns\Afterbuy\Model\UpdateShopProducts\Result")
      * @Serializer\SerializedName("Result")
-     * @var Result
+     * @var null|Result
      */
-    protected $result;
+    protected ?Result $result = null;
 
     /**
-     * @return Result
+     * @return null|Result
      */
-    public function getResult()
+    public function getResult(): ?Result
     {
         return $this->result;
     }
