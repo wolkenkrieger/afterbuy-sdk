@@ -17,63 +17,63 @@ class PaymentInfo extends AbstractPaymentInfo
      * @Serializer\SerializedName("PaymentID")
      * @var string
      */
-    protected $paymentId;
+    protected string $paymentId;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentFunction")
      * @var string
      */
-    protected $paymentFunction;
+    protected string $paymentFunction;
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\GetSoldItems\PaymentData")
      * @Serializer\SerializedName("PaymentData")
      * @var PaymentData
      */
-    protected $paymentData;
+    protected PaymentData $paymentData;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentTransactionID")
      * @var string
      */
-    protected $paymentTransactionId;
+    protected string $paymentTransactionId;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentStatus")
      * @var string
      */
-    protected $paymentStatus;
+    protected string $paymentStatus;
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
      * @Serializer\SerializedName("FullAmount")
      * @var FloatType
      */
-    protected $fullAmount;
+    protected FloatType $fullAmount;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentInstruction")
      * @var string
      */
-    protected $paymentInstruction;
+    protected string $paymentInstruction;
 
     /**
      * @Serializer\Type("DateTime<'d.m.Y H:i:s', 'UTC', '!d.m.Y'>")
      * @Serializer\SerializedName("InvoiceDate")
      * @var DateTime
      */
-    protected $invoiceDate;
+    protected DateTime $invoiceDate;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("EFTID")
      * @var string
      */
-    protected $eftid;
+    protected string $eftid;
 	
 	/**
 	 * @Serializer\Type("array<Ns\Afterbuy\Model\GetSoldItems\PayoutId>")
@@ -161,16 +161,5 @@ class PaymentInfo extends AbstractPaymentInfo
 	public function getPayoutIds(): array
 	{
 		return $this->payoutIds;
-	}
-	
-	/**
-	 * @param  array $payoutIds
-	 * @return self
-	 */
-	public function setPayoutIds(array $payoutIds): self
-	{
-		$this->payoutIds = $payoutIds;
-		
-		return $this;
 	}
 }
