@@ -30,32 +30,10 @@ class PayoutId extends AbstractModel
 	}
 	
 	/**
-	 * @param $payoutId
-	 * @return $this
-	 */
-	public function setPayoutId($payoutId): self
-	{
-		$this->payoutId = $payoutId;
-		
-		return $this;
-	}
-	
-	/**
 	 * @return string
 	 */
 	public function getPlatformSpecificOrderId(): string
 	{
 		return $this->platformSpecificOrderId;
-	}
-	
-	/**
-	 * @param $platformSpecificOrderId
-	 * @return $this
-	 */
-	public function setPlatformSpecificOrderId($platformSpecificOrderId): self
-	{
-		$this->platformSpecificOrderId = $platformSpecificOrderId;
-		
-		return $this;
 	}
 }
