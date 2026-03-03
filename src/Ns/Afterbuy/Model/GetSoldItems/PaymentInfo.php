@@ -74,6 +74,14 @@ class PaymentInfo extends AbstractPaymentInfo
      * @var string
      */
     protected $eftid;
+	
+	/**
+	 * @Serializer\Type("array<Ns\Afterbuy\Model\GetSoldItems\PayoutId>")
+	 * @Serializer\XmlList(entry="PayoutId")
+	 * @Serializer\SerializedName("PayoutIds")
+	 * @var \Ns\Afterbuy\Model\GetSoldItems\PayoutId[]
+	 */
+	protected array $payoutIds;
 
     /**
      * @return string
@@ -146,4 +154,23 @@ class PaymentInfo extends AbstractPaymentInfo
     {
         return $this->eftid;
     }
+	
+	/**
+	 * @return \Ns\Afterbuy\Model\GetSoldItems\PayoutId[]
+	 */
+	public function getPayoutIds(): array
+	{
+		return $this->payoutIds;
+	}
+	
+	/**
+	 * @param  array $payoutIds
+	 * @return self
+	 */
+	public function setPayoutIds(array $payoutIds): self
+	{
+		$this->payoutIds = $payoutIds;
+		
+		return $this;
+	}
 }
