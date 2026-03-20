@@ -17,14 +17,14 @@ class PaymentInfo extends AbstractPaymentInfo
      * @Serializer\SerializedName("PaymentID")
      * @var string
      */
-    protected $paymentId;
+    protected string $paymentId = '';
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentFunction")
      * @var string
      */
-    protected $paymentFunction;
+    protected string $paymentFunction = '';
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\GetSoldItems\PaymentData")
@@ -38,14 +38,14 @@ class PaymentInfo extends AbstractPaymentInfo
      * @Serializer\SerializedName("PaymentTransactionID")
      * @var string
      */
-    protected $paymentTransactionId;
+    protected string $paymentTransactionId = '';
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentStatus")
      * @var string
      */
-    protected $paymentStatus;
+    protected string $paymentStatus = '';
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
@@ -59,7 +59,7 @@ class PaymentInfo extends AbstractPaymentInfo
      * @Serializer\SerializedName("PaymentInstruction")
      * @var string
      */
-    protected $paymentInstruction;
+    protected string $paymentInstruction = '';
 
     /**
      * @Serializer\Type("DateTime<'d.m.Y H:i:s', 'UTC', '!d.m.Y'>")
@@ -73,7 +73,7 @@ class PaymentInfo extends AbstractPaymentInfo
      * @Serializer\SerializedName("EFTID")
      * @var string
      */
-    protected $eftid;
+    protected string $eftid = '';
 	
 	/**
 	 * @Serializer\Type("array<Ns\Afterbuy\Model\GetSoldItems\PayoutId>")
