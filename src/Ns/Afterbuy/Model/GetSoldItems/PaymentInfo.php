@@ -17,63 +17,63 @@ class PaymentInfo extends AbstractPaymentInfo
      * @Serializer\SerializedName("PaymentID")
      * @var string
      */
-    protected string $paymentId = '';
+    protected $paymentId;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentFunction")
      * @var string
      */
-    protected string $paymentFunction = '';
+    protected $paymentFunction;
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\GetSoldItems\PaymentData")
      * @Serializer\SerializedName("PaymentData")
      * @var PaymentData
      */
-    protected PaymentData $paymentData;
+    protected $paymentData;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentTransactionID")
      * @var string
      */
-    protected string $paymentTransactionId = '';
+    protected $paymentTransactionId;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentStatus")
      * @var string
      */
-    protected string $paymentStatus = '';
+    protected $paymentStatus;
 
     /**
      * @Serializer\Type("Ns\Afterbuy\Model\FloatType")
      * @Serializer\SerializedName("FullAmount")
      * @var FloatType
      */
-    protected FloatType $fullAmount;
+    protected $fullAmount;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("PaymentInstruction")
      * @var string
      */
-    protected string $paymentInstruction = '';
+    protected $paymentInstruction;
 
     /**
      * @Serializer\Type("DateTime<'d.m.Y H:i:s', 'UTC', '!d.m.Y'>")
      * @Serializer\SerializedName("InvoiceDate")
      * @var DateTime
      */
-    protected DateTime $invoiceDate;
+    protected $invoiceDate;
 
     /**
      * @Serializer\Type("string")
      * @Serializer\SerializedName("EFTID")
      * @var string
      */
-    protected string $eftid = '';
+    protected $eftid = '';
 	
 	/**
 	 * @Serializer\Type("array<Ns\Afterbuy\Model\GetSoldItems\PayoutId>")
@@ -81,7 +81,7 @@ class PaymentInfo extends AbstractPaymentInfo
 	 * @Serializer\SerializedName("PayoutIds")
 	 * @var \Ns\Afterbuy\Model\GetSoldItems\PayoutId[]
 	 */
-	protected array $payoutIds;
+	protected $payoutIds;
 
     /**
      * @return string
