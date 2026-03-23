@@ -73,7 +73,7 @@ class PaymentInfo extends AbstractPaymentInfo
      * @Serializer\SerializedName("EFTID")
      * @var string
      */
-    protected $eftid = '';
+    protected $eftid;
 	
 	/**
 	 * @Serializer\Type("array<Ns\Afterbuy\Model\GetSoldItems\PayoutId>")
